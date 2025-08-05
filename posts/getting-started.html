@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Web Development - My Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #202124;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #1a73e8;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .post-content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+        }
+
+        .post-title {
+            font-size: 2rem;
+            color: #202124;
+            margin-bottom: 20px;
+        }
+
+        .post-meta {
+            color: #5f6368;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .post-body {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .post-body h2 {
+            color: #202124;
+            margin: 30px 0 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .post-body h3 {
+            color: #202124;
+            margin: 25px 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .post-body p {
+            margin-bottom: 15px;
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .post-body li {
+            margin-bottom: 8px;
+        }
+
+        .code-block {
+            background: #f1f3f4;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            color: #5f6368;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .post-content {
+                padding: 20px;
+            }
+            
+            .post-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Blog</h1>
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to Home</a>
+
+        <div class="post-content">
+            <h1 class="post-title">Getting Started with Web Development</h1>
+            <div class="post-meta">
+                Published on January 15, 2024 • 5 min read
+            </div>
+
+            <div class="post-body">
+                <p>Web development can seem overwhelming at first, but with the right approach, anyone can learn to create beautiful and functional websites. This guide will walk you through the fundamentals of web development using HTML, CSS, and JavaScript.</p>
+
+                <h2>What is Web Development?</h2>
+                <p>Web development is the process of creating websites and web applications. It involves three main technologies:</p>
+                <ul>
+                    <li><strong>HTML (HyperText Markup Language):</strong> The structure and content of your website</li>
+                    <li><strong>CSS (Cascading Style Sheets):</strong> The styling and visual presentation</li>
+                    <li><strong>JavaScript:</strong> The interactivity and dynamic behavior</li>
+                </ul>
+
+                <h2>Setting Up Your Development Environment</h2>
+                <p>Before you start coding, you'll need a few basic tools:</p>
+                <ol>
+                    <li>A text editor (VS Code, Sublime Text, or even Notepad)</li>
+                    <li>A web browser (Chrome, Firefox, Safari)</li>
+                    <li>A local development server (optional but recommended)</li>
+                </ol>
+
+                <h2>Your First HTML Page</h2>
+                <p>Let's start with a simple HTML structure:</p>
+                <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </div>
+
+                <h2>Adding CSS Styling</h2>
+                <p>CSS makes your website look professional. Here's a simple example:</p>
+                <div class="code-block">
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+}
+                </div>
+
+                <h2>Making It Interactive with JavaScript</h2>
+                <p>JavaScript adds interactivity to your website:</p>
+                <div class="code-block">
+// Add this to your HTML file
+&lt;button onclick="changeColor()"&gt;Change Color&lt;/button&gt;
+
+&lt;script&gt;
+function changeColor() {
+    document.body.style.backgroundColor = 
+        '#' + Math.floor(Math.random()*16777215).toString(16);
+}
+&lt;/script&gt;
+                </div>
+
+                <h2>Next Steps</h2>
+                <p>Now that you have the basics, here's what you should focus on next:</p>
+                <ul>
+                    <li>Learn more HTML elements and semantic markup</li>
+                    <li>Master CSS layout techniques (Flexbox and Grid)</li>
+                    <li>Practice JavaScript fundamentals</li>
+                    <li>Learn about responsive design</li>
+                    <li>Explore modern frameworks like React or Vue.js</li>
+                </ul>
+
+                <h2>Resources for Learning</h2>
+                <p>Here are some excellent resources to continue your learning journey:</p>
+                <ul>
+                    <li>MDN Web Docs - Comprehensive web development documentation</li>
+                    <li>freeCodeCamp - Free interactive tutorials</li>
+                    <li>The Odin Project - Full-stack curriculum</li>
+                    <li>CSS-Tricks - Excellent CSS tutorials and examples</li>
+                </ul>
+
+                <p>Remember, web development is a journey, not a destination. Start with small projects, practice regularly, and don't be afraid to experiment. Happy coding!</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #202124;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #1a73e8;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header p {
+            color: #5f6368;
+            font-size: 1.1rem;
+        }
+
+        .search-box {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            outline: none;
+            transition: box-shadow 0.2s;
+        }
+
+        .search-input:focus {
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-color: rgba(223, 225, 229, 0);
+        }
+
+        .blog-links {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            overflow: hidden;
+        }
+
+        .blog-link {
+            display: block;
+            padding: 16px 20px;
+            text-decoration: none;
+            color: #1a0dab;
+            border-bottom: 1px solid #f1f3f4;
+            transition: background-color 0.2s;
+        }
+
+        .blog-link:last-child {
+            border-bottom: none;
+        }
+
+        .blog-link:hover {
+            background-color: #f8f9fa;
+        }
+
+        .link-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: #1a0dab;
+        }
+
+        .link-url {
+            font-size: 14px;
+            color: #006621;
+            margin-bottom: 4px;
+        }
+
+        .link-description {
+            font-size: 14px;
+            color: #5f6368;
+            line-height: 1.4;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            color: #5f6368;
+            font-size: 14px;
+        }
+
+        .search-results {
+            display: none;
+        }
+
+        .search-results.show {
+            display: block;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: #5f6368;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .search-input {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Blog</h1>
+            <p>Simple thoughts and ideas</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search blog posts..." id="searchInput">
+        </div>
+
+        <div class="blog-links" id="blogLinks">
+            <a href="posts/getting-started.html" class="blog-link">
+                <div class="link-title">Getting Started with Web Development</div>
+                <div class="link-url">myblog.com/posts/getting-started</div>
+                <div class="link-description">A beginner's guide to web development, covering HTML, CSS, and JavaScript fundamentals. Learn the basics of creating your first website.</div>
+            </a>
+
+            <a href="posts/css-tips.html" class="blog-link">
+                <div class="link-title">10 Essential CSS Tips for Better Design</div>
+                <div class="link-url">myblog.com/posts/css-tips</div>
+                <div class="link-description">Discover practical CSS techniques that will improve your website's appearance and user experience. From flexbox to animations.</div>
+            </a>
+
+            <a href="posts/javascript-basics.html" class="blog-link">
+                <div class="link-title">JavaScript Basics: Understanding the Fundamentals</div>
+                <div class="link-url">myblog.com/posts/javascript-basics</div>
+                <div class="link-description">Learn the core concepts of JavaScript programming. Variables, functions, objects, and modern ES6+ features explained.</div>
+            </a>
+
+            <a href="posts/responsive-design.html" class="blog-link">
+                <div class="link-title">Responsive Design Principles</div>
+                <div class="link-url">myblog.com/posts/responsive-design</div>
+                <div class="link-description">How to create websites that look great on all devices. Mobile-first approach and CSS media queries.</div>
+            </a>
+
+            <a href="posts/web-performance.html" class="blog-link">
+                <div class="link-title">Web Performance Optimization Guide</div>
+                <div class="link-url">myblog.com/posts/web-performance</div>
+                <div class="link-description">Techniques to make your website faster and more efficient. Image optimization, caching, and code splitting strategies.</div>
+            </a>
+
+            <a href="posts/accessibility.html" class="blog-link">
+                <div class="link-title">Web Accessibility Best Practices</div>
+                <div class="link-url">myblog.com/posts/accessibility</div>
+                <div class="link-description">Make your websites accessible to everyone. Learn about ARIA labels, semantic HTML, and keyboard navigation.</div>
+            </a>
+        </div>
+
+        <div class="search-results" id="searchResults">
+            <div class="no-results" id="noResults">
+                <p>No results found for "<span id="searchTerm"></span>"</p>
+                <p>Try different keywords or check your spelling.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 My Blog. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const blogLinks = document.getElementById('blogLinks');
+        const searchResults = document.getElementById('searchResults');
+        const noResults = document.getElementById('noResults');
+        const searchTermSpan = document.getElementById('searchTerm');
+
+        // Store all blog links for searching
+        const allBlogLinks = Array.from(blogLinks.querySelectorAll('.blog-link'));
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                // Show all links when search is empty
+                blogLinks.style.display = 'block';
+                searchResults.classList.remove('show');
+                return;
+            }
+
+            // Filter blog links based on search term
+            const filteredLinks = allBlogLinks.filter(link => {
+                const title = link.querySelector('.link-title').textContent.toLowerCase();
+                const description = link.querySelector('.link-description').textContent.toLowerCase();
+                const url = link.querySelector('.link-url').textContent.toLowerCase();
+                
+                return title.includes(searchTerm) || 
+                       description.includes(searchTerm) || 
+                       url.includes(searchTerm);
+            });
+
+            // Update the display
+            if (filteredLinks.length === 0) {
+                // Show no results message
+                blogLinks.style.display = 'none';
+                searchResults.classList.add('show');
+                searchTermSpan.textContent = searchTerm;
+            } else {
+                // Show filtered results
+                blogLinks.style.display = 'none';
+                searchResults.classList.remove('show');
+                
+                // Create a temporary container for filtered results
+                const tempContainer = document.createElement('div');
+                tempContainer.className = 'blog-links';
+                
+                filteredLinks.forEach(link => {
+                    const clonedLink = link.cloneNode(true);
+                    tempContainer.appendChild(clonedLink);
+                });
+                
+                // Replace the original blog links with filtered results
+                blogLinks.parentNode.insertBefore(tempContainer, blogLinks);
+                blogLinks.remove();
+                
+                // Update the reference
+                blogLinks = tempContainer;
+            }
+        });
+
+        // Add some interactivity to the search box
+        searchInput.addEventListener('focus', function() {
+            this.style.boxShadow = '0 1px 6px rgba(32, 33, 36, 0.28)';
+        });
+
+        searchInput.addEventListener('blur', function() {
+            this.style.boxShadow = '';
+        });
+
+        // Add keyboard navigation
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const visibleLinks = document.querySelectorAll('.blog-link');
+                if (visibleLinks.length > 0) {
+                    visibleLinks[0].click();
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
