@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ahmetomer.net</title>
+    <title>Projects - ahmetomer.net</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
@@ -70,14 +70,14 @@
             text-decoration: underline;
         }
 
-        .blog-links {
+        .project-links {
             background: white;
             border-radius: 5px;
             box-shadow: 0 1px 4px rgba(32, 33, 36, 0.20);
             overflow: hidden;
         }
 
-        .blog-link {
+        .project-link {
             display: block;
             padding: 16px 20px;
             text-decoration: none;
@@ -86,11 +86,11 @@
             transition: background-color 0.2s;
         }
 
-        .blog-link:last-child {
+        .project-link:last-child {
             border-bottom: none;
         }
 
-        .blog-link:hover {
+        .project-link:hover {
             background-color: #f8f9fa;
         }
 
@@ -99,6 +99,15 @@
             font-weight: 500;
             margin-bottom: 4px;
             color: #1a0dab;
+            display: flex;
+            align-items: center;
+        }
+
+        .favicon {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
+            border-radius: 2px;
         }
 
         .link-url {
@@ -129,10 +138,6 @@
             .header h1 {
                 font-size: 2rem;
             }
-            
-            .search-input {
-                max-width: 100%;
-            }
         }
     </style>
 </head>
@@ -151,13 +156,19 @@
             </ul>
         </div>
 
-        <div class="blog-links" id="blogLinks">
-            <a href="posts/getting-started.html" class="blog-link">
-                <div class="link-title">Getting Started with Web Development</div>
-                <div class="link-url">myblog.com/posts/getting-started</div>
-                <div class="link-description">A beginner's guide to web development, covering HTML, CSS, and JavaScript fundamentals. Learn the basics of creating your first website.</div>
+        <div class="project-links" id="projectLinks">
+            <a href="https://activiews.xyz" target="_blank" class="project-link">
+                <div class="link-title">
+                    <img src="https://activiews.xyz/assets/favicons/apple-touch-icon.png" alt="" class="favicon" onerror="this.style.display='none'">
+                    Activiews
+                </div>
+                <div class="link-url">activiews.xyz</div>
+                <div class="link-description">A privacy-first fitness companion for Apple workouts that helps you visualize and track your activities. Features workout cards, activity lists, map views, calendar tracking, and flyover visualization.</div>
             </a>
+
+            
         </div>
+
         <div class="footer">
             <p>&copy; 2025. All rights reserved. (I guess)</p>
         </div>
