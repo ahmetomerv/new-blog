@@ -42,27 +42,6 @@
             font-size: 1.1rem;
         }
 
-        .search-box {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .search-input {
-            width: 100%;
-            max-width: 500px;
-            padding: 12px 20px;
-            font-size: 16px;
-            border: 1px solid #dfe1e5;
-            border-radius: 24px;
-            outline: none;
-            transition: box-shadow 0.2s;
-        }
-
-        .search-input:focus {
-            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-            border-color: rgba(223, 225, 229, 0);
-        }
-
         .blog-links {
             background: white;
             border-radius: 8px;
@@ -114,20 +93,6 @@
             font-size: 14px;
         }
 
-        .search-results {
-            display: none;
-        }
-
-        .search-results.show {
-            display: block;
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 40px 20px;
-            color: #5f6368;
-        }
-
         @media (max-width: 600px) {
             .container {
                 padding: 10px;
@@ -148,10 +113,6 @@
         <div class="header">
             <h1>My Blog</h1>
             <p>Simple thoughts and ideas</p>
-        </div>
-
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder="Search blog posts..." id="searchInput">
         </div>
 
         <div class="blog-links" id="blogLinks">
@@ -192,96 +153,9 @@
             </a>
         </div>
 
-        <div class="search-results" id="searchResults">
-            <div class="no-results" id="noResults">
-                <p>No results found for "<span id="searchTerm"></span>"</p>
-                <p>Try different keywords or check your spelling.</p>
-            </div>
-        </div>
-
         <div class="footer">
             <p>&copy; 2024 My Blog. All rights reserved.</p>
         </div>
     </div>
-
-    <script>
-        const searchInput = document.getElementById('searchInput');
-        const blogLinks = document.getElementById('blogLinks');
-        const searchResults = document.getElementById('searchResults');
-        const noResults = document.getElementById('noResults');
-        const searchTermSpan = document.getElementById('searchTerm');
-
-        // Store all blog links for searching
-        const allBlogLinks = Array.from(blogLinks.querySelectorAll('.blog-link'));
-
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase().trim();
-            
-            if (searchTerm === '') {
-                // Show all links when search is empty
-                blogLinks.style.display = 'block';
-                searchResults.classList.remove('show');
-                return;
-            }
-
-            // Filter blog links based on search term
-            const filteredLinks = allBlogLinks.filter(link => {
-                const title = link.querySelector('.link-title').textContent.toLowerCase();
-                const description = link.querySelector('.link-description').textContent.toLowerCase();
-                const url = link.querySelector('.link-url').textContent.toLowerCase();
-                
-                return title.includes(searchTerm) || 
-                       description.includes(searchTerm) || 
-                       url.includes(searchTerm);
-            });
-
-            // Update the display
-            if (filteredLinks.length === 0) {
-                // Show no results message
-                blogLinks.style.display = 'none';
-                searchResults.classList.add('show');
-                searchTermSpan.textContent = searchTerm;
-            } else {
-                // Show filtered results
-                blogLinks.style.display = 'none';
-                searchResults.classList.remove('show');
-                
-                // Create a temporary container for filtered results
-                const tempContainer = document.createElement('div');
-                tempContainer.className = 'blog-links';
-                
-                filteredLinks.forEach(link => {
-                    const clonedLink = link.cloneNode(true);
-                    tempContainer.appendChild(clonedLink);
-                });
-                
-                // Replace the original blog links with filtered results
-                blogLinks.parentNode.insertBefore(tempContainer, blogLinks);
-                blogLinks.remove();
-                
-                // Update the reference
-                blogLinks = tempContainer;
-            }
-        });
-
-        // Add some interactivity to the search box
-        searchInput.addEventListener('focus', function() {
-            this.style.boxShadow = '0 1px 6px rgba(32, 33, 36, 0.28)';
-        });
-
-        searchInput.addEventListener('blur', function() {
-            this.style.boxShadow = '';
-        });
-
-        // Add keyboard navigation
-        searchInput.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                const visibleLinks = document.querySelectorAll('.blog-link');
-                if (visibleLinks.length > 0) {
-                    visibleLinks[0].click();
-                }
-            }
-        });
-    </script>
 </body>
 </html> 
