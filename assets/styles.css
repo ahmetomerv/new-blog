@@ -69,12 +69,13 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #1a0dab;
+    color: #1c1c1c;
     font-size: 0.95rem;
 }
 
 .nav-links a:hover {
     text-decoration: underline;
+    color: #1c1c1c;
 }
 
 /* Contact Icons */
@@ -88,7 +89,7 @@ body {
 .contact-icons a {
     display: flex;
     align-items: center;
-    color: #1a0dab;
+    color: #1c1c1c;
     text-decoration: none;
     transition: opacity 0.2s;
 }
