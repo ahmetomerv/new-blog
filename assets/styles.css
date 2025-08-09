@@ -1,0 +1,252 @@
+/* Global Styles for Simple Blog */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5ebed;
+    color: #202124;
+    line-height: 1.6;
+}
+
+/* Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #1a73e8;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.header p {
+    color: #5f6368;
+    font-size: 1.1rem;
+}
+
+/* Navigation */
+.nav-bar {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Icons */
+.contact-icons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #1a0dab;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.contact-icons a:hover {
+    opacity: 0.7;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Link Cards (Blog and Project links) */
+.blog-links,
+.project-links {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(32, 33, 36, 0.20);
+    overflow: hidden;
+}
+
+.blog-link,
+.project-link {
+    display: block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #1a0dab;
+    border-bottom: 1px solid #f1f3f4;
+    transition: background-color 0.2s;
+}
+
+.blog-link:last-child,
+.project-link:last-child {
+    border-bottom: none;
+}
+
+.blog-link:hover,
+.project-link:hover {
+    background-color: #f8f9fa;
+}
+
+/* Link Content */
+.link-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #1a0dab;
+    display: flex;
+    align-items: center;
+}
+
+.link-url {
+    font-size: 14px;
+    color: #1a0dab;
+    margin-bottom: 4px;
+}
+
+.link-description {
+    font-size: 14px;
+    color: #5f6368;
+    line-height: 1.4;
+}
+
+/* Favicon for project links */
+.favicon {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+/* Back link for blog posts */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Blog Post Content */
+.post-content {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.post-title {
+    font-size: 2rem;
+    color: #202124;
+    margin-bottom: 20px;
+}
+
+.post-meta {
+    color: #5f6368;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.post-body {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.post-body h2 {
+    color: #202124;
+    margin: 30px 0 15px 0;
+    font-size: 1.5rem;
+}
+
+.post-body h3 {
+    color: #202124;
+    margin: 25px 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.post-body p {
+    margin-bottom: 15px;
+}
+
+.post-body ul, 
+.post-body ol {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+.post-body li {
+    margin-bottom: 8px;
+}
+
+.code-block {
+    background: #f1f3f4;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    margin: 15px 0;
+    overflow-x: auto;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #5f6368;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .post-content {
+        padding: 20px;
+    }
+    
+    .post-title {
+        font-size: 1.5rem;
+    }
+    
+    .search-input {
+        max-width: 100%;
+    }
+}
