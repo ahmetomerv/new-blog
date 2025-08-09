@@ -1,5 +1,45 @@
 /* Global Styles for Simple Blog */
 
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.crimson-text-regular {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.crimson-text-semibold {
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.crimson-text-bold {
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.crimson-text-regular-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.crimson-text-semibold-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.crimson-text-bold-italic {
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -8,7 +48,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Crimson Text", serif;
     background-color: #e5ebed;
     color: #202124;
     line-height: 1.6;
@@ -29,6 +69,7 @@ body {
 }
 
 .header h1 {
+    font-family: sans-serif;
     font-size: 2.2rem;
     color: #1a73e8;
     margin-bottom: 8px;
@@ -36,6 +77,7 @@ body {
 }
 
 .header p {
+    font-family: sans-serif;
     color: #5f6368;
     font-size: 1rem;
     margin-bottom: 0;
@@ -68,6 +110,7 @@ body {
 }
 
 .nav-links a {
+    font-family: sans-serif;
     text-decoration: none;
     color: #1c1c1c;
     font-size: 0.95rem;
@@ -87,6 +130,7 @@ body {
 }
 
 .contact-icons a {
+    font-family: sans-serif;
     display: flex;
     align-items: center;
     color: #1c1c1c;
@@ -134,6 +178,7 @@ body {
 
 /* Link Content */
 .link-title {
+    font-family: sans-serif;
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 4px;
@@ -143,6 +188,7 @@ body {
 }
 
 .link-url {
+    font-family: sans-serif;
     font-size: 14px;
     color: #1a0dab;
     margin-bottom: 4px;
@@ -164,6 +210,7 @@ body {
 
 /* Back link for blog posts */
 .back-link {
+    font-family: sans-serif;
     display: inline-block;
     margin-bottom: 15px;
     color: #1a73e8;
@@ -180,17 +227,19 @@ body {
 .post-content {
     background: white;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(32, 33, 36, 0.28);
 }
 
 .post-title {
+    font-family: sans-serif;
     font-size: 2rem;
     color: #202124;
     margin-bottom: 20px;
 }
 
 .post-meta {
+    font-family: sans-serif;
     color: #5f6368;
     margin-bottom: 30px;
     font-size: 14px;
@@ -202,12 +251,14 @@ body {
 }
 
 .post-body h2 {
+    font-family: sans-serif;
     color: #202124;
     margin: 30px 0 15px 0;
     font-size: 1.5rem;
 }
 
 .post-body h3 {
+    font-family: sans-serif;
     color: #202124;
     margin: 25px 0 10px 0;
     font-size: 1.2rem;
@@ -238,6 +289,7 @@ body {
 
 /* Footer */
 .footer {
+    font-family: sans-serif;
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
