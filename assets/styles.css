@@ -93,10 +93,6 @@ body {
 }
 
 /* Navigation */
-.nav-bar {
-    /* Remove text-align center since we're using flex */
-}
-
 .nav-links {
     list-style: none;
     display: flex;
@@ -112,14 +108,14 @@ body {
     font-size: 1.2rem;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.contact-icons a:hover {
     text-decoration: underline;
-    color: #1c1c1c;
+    color: #245f8f;
 }
 
 /* Contact Icons */
 .contact-icons {
-    /* Remove text-align center since we're using flex */
     display: flex;
     gap: 15px;
     align-items: center;
@@ -130,15 +126,9 @@ body {
     display: flex;
     align-items: center;
     color: #1c1c1c;
-    text-decoration: none;
-    transition: opacity 0.2s;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 5px 10px;
-    border-radius: 4px;
-}
-
-.contact-icons a:hover {
-    opacity: 0.7;
+    text-decoration: none;
 }
 
 /* Link Cards (Blog and Project links) */
@@ -184,7 +174,7 @@ body {
 .link-url {
     font-family: sans-serif;
     font-size: 14px;
-    color: #3e78e2;
+    color: #155aca;
     margin-bottom: 4px;
 }
 
