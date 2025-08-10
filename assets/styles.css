@@ -76,6 +76,11 @@ body {
     font-weight: normal;
 }
 
+.header h1 a {
+    text-decoration: none;
+    color: #252525;
+}
+
 .header p {
     font-family: sans-serif;
     color: #5f6368;
