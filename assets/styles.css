@@ -105,15 +105,11 @@ body {
     padding: 0;
 }
 
-.nav-links li {
-    /* Remove display: inline and margin since we're using flex */
-}
-
 .nav-links a {
-    font-family: sans-serif;
+    font-family: "Crimson Text", serif;
     text-decoration: none;
     color: #1c1c1c;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 
 .nav-links a:hover {
