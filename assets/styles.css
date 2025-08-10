@@ -119,6 +119,7 @@ body {
     display: flex;
     gap: 15px;
     align-items: center;
+    position: relative;
 }
 
 .contact-icons a {
@@ -129,6 +130,26 @@ body {
     font-size: 1.1rem;
     padding: 5px 10px;
     text-decoration: none;
+}
+
+/* Tooltip styles for email copying */
+.tooltip {
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-family: sans-serif;
+}
+
+.tooltip.show {
+    opacity: 1;
 }
 
 /* Link Cards (Blog and Project links) */
