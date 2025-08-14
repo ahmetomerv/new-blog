@@ -162,6 +162,11 @@ a {
 }
 
 /* Link Cards (Blog and Project links) */
+
+.project-links {
+    margin-top: 20px;
+}
+
 .blog-links,
 .project-links {
     background: white;
