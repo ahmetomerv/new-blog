@@ -255,14 +255,21 @@ a {
 .profile-section {
     text-align: left;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .profile-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 10%;
     object-fit: cover;
-    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.about-title {
+    margin: 0;
 }
 
 .post-title {
